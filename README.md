@@ -54,6 +54,7 @@ Você pode acessar a versão online do projeto clicando no link abaixo:
 
 Desenvolvido por **Lucas Oliveira** durante a Imersão Alura + Google.
 
-[![Linkedin]](https://www.linkedin.com/in/lucassilvaolv/)
-[![GitHub]](https://github.com/lucassllv)
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucassilvaolv/)](https://www.linkedin.com/in/lucassilvaolv/)
+[![GitHub Badge](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=Github&logoColor=white&link=https://github.com/lucassllv)](https://github.com/lucassllv)
+
 
