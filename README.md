@@ -29,16 +29,6 @@ O projeto foi construído com foco nos critérios de **utilidade**, **criativida
 
 ---
 
-## 📸 Screenshots
-
-### Página Inicial (Home)
-<img src="Captura de tela (2).png" alt="Print da Home" width="100%">
-
-### Página de Conteúdo (Exemplo HTML)
-<img src="Captura de tela (3).png" alt="Print da Página HTML" width="100%">
-
----
-
 ## 🛠 Tecnologias utilizadas
 
 O projeto foi desenvolvido utilizando HTML semântico e CSS moderno, sem uso de frameworks externos, para garantir o aprendizado dos fundamentos:
@@ -66,3 +56,4 @@ Desenvolvido por **Lucas Oliveira** durante a Imersão Alura + Google.
 
 [![Linkedin]](https://www.linkedin.com/in/lucassilvaolv/)
 [![GitHub]](https://github.com/lucassllv)
+
