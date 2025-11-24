@@ -1,0 +1,337 @@
+:root {
+    /* --- Paleta Dark Mode --- */
+    --bg-fundo: #131314;       /* Fundo da página (Preto suave) */
+    --bg-card: #1e1f20;        /* Fundo dos cartões (Cinza escuro) */
+    --texto-principal: #E0E0E0; /* Texto quase branco (para leitura) */
+    --texto-secundario: #A0A0A0; /* Texto cinza (para descrições) */
+    
+    /* --- Cores das Tecnologias (Sua paleta Coolors) --- */
+    --cor-html: #F67B37;
+    --cor-css: #29B5E9;
+    --cor-js: #F5CE35;
+}
+
+body {
+    background-color: var(--bg-fundo);
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+main{
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 80vh; 
+}
+
+/* --- ESTILO GERAL DE CARDS --- */
+.card {
+    background-color: var(--bg-card);
+    border-radius: 16px;         /* Bordas bem arredondadas (estilo mobile moderno) */
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra suave para dar profundidade */
+    border: 1px solid #333;      /* Uma borda sutil para separar do fundo preto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- SEÇÃO DE INTRODUÇÃO --- */
+.intro-container {
+    max-width: 800px;
+    margin: 40px auto; /* Centraliza na tela */
+    padding: 0 20px;
+}
+
+.intro-card h2 {
+    margin-top: 0;
+    color: var(--texto-principal);
+}
+
+.intro-card p {
+    color: var(--texto-secundario);
+    line-height: 1.6; /* Melhora a leitura */
+    font-size: 1.1rem;
+}
+
+/* --- GRID DE TECNOLOGIAS (Layout) --- */
+.tech-grid {
+    display: flex;          /* Coloca os cards lado a lado */
+    justify-content: center;
+    gap: 30px;              /* Espaço entre os cards */
+    padding: 20px;
+    flex-wrap: wrap;        /* Se a tela for pequena, os cards descem */
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+/* --- DESIGN DO CARD DE TECNOLOGIA --- */
+.tech-card {
+    width: 280px;           /* Largura fixa para ficarem iguais */
+    text-align: center;     /* Tudo centralizado */
+    color: var(--texto-principal);
+    position: relative;     /* Para animações futuras */
+    overflow: hidden;       /* Garante que nada saia da borda redonda */
+}
+
+/* Interação ao passar o mouse (Hover) */
+.tech-card:hover {
+    transform: translateY(-10px); /* O card "flutua" para cima */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-color: #555;
+}
+
+/* Estilo do Ícone no topo do card */
+.icon-container {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Títulos e Descrições */
+.tech-card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.5rem;
+}
+
+.tech-card p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+/* O botãozinho "Consultar" dentro do card */
+.btn-acessar {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: inherit; /* Herda a cor do card */
+    opacity: 0.8;
+}
+
+/* --- CORES ESPECÍFICAS DE CADA CARD --- */
+
+/* HTML: Detalhes em Laranja */
+.html-card .icon-container, .html-card .btn-acessar { color: var(--cor-html); }
+.html-card:hover { border-bottom: 4px solid var(--cor-html); }
+
+/* CSS: Detalhes em Azul */
+.css-card .icon-container, .css-card .btn-acessar { color: var(--cor-css); }
+.css-card:hover { border-bottom: 4px solid var(--cor-css); }
+
+/* JS: Detalhes em Amarelo */
+.js-card .icon-container, .js-card .btn-acessar { color: var(--cor-js); }
+.js-card:hover { border-bottom: 4px solid var(--cor-js); }
+
+/* --- Estilo do Rodapé --- */
+
+footer {
+    margin-top: 50px;           /* Empurra o rodapé para baixo, longe do conteúdo */
+    padding: 20px;              /* Espaço interno para não ficar espremido */
+    background-color: #2b2b2e;     /* Fundo cinza escuro (quase preto) */
+    color: white;               /* Texto branco */
+    text-align: center;         /* Tudo centralizado */
+}
+
+/* Estilizando APENAS os links que estão dentro do footer */
+footer a {
+    color: #fff;                /* Links brancos */
+    text-decoration: none;      /* Sem sublinhado */
+    font-weight: bold;          /* Texto mais gordinho */
+    margin: 0 15px;             /* Espaço nas laterais para separar GitHub de LinkedIn */
+    font-size: 18px;            /* Um pouco maior para ser fácil de clicar */
+}
+
+/* Efeito ao passar o mouse nos links do rodapé */
+footer a:hover {
+    color: #ddd;                /* Fica um cinza clarinho */
+}
+
+/* --- Configuração dos Ícones SVG --- */
+.icone-social {
+    width: 20px;            /* Define a largura do ícone */
+    height: 20px;           /* Define a altura */
+    fill: currentColor;     /* MÁGICA: O ícone pega a mesma cor do texto (branco) */
+    vertical-align: middle; /* Alinha o ícone com o meio do texto */
+    margin-right: 8px;      /* Um espacinho entre o ícone e a palavra */
+    margin-bottom: 4px;     /* Um ajuste fino para ele não parecer "torto" */
+}
+
+/* --- Página de Conteúdo --- */
+
+/* Estilo da Tabela */
+/* --- TABELAS MODERNAS (Estilo Card) --- */
+
+/* O container da tabela (A "Caixa") */
+table {
+    width: 100%;
+    border-collapse: separate; /* Necessário para o border-radius funcionar */
+    border-spacing: 0;         /* Remove espaços entre células */
+    background-color: var(--bg-card); /* Fundo cinza do tema */
+    border-radius: 12px;       /* Cantos arredondados iguais aos cards da Home */
+    overflow: hidden;          /* Garante que o cabeçalho não corte os cantos redondos */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Sombra suave */
+    margin-top: 20px;
+    border: 1px solid #333;    /* Borda sutil externa */
+}
+
+/* Células (Cabeçalho e Dados) */
+th, td {
+    padding: 15px 20px;        /* Mais espaço para respirar */
+    text-align: left;
+    border-bottom: 1px solid #333; /* Linha divisória sutil e escura */
+    color: var(--texto-principal);
+}
+
+/* Remover a borda da última linha para não ficar dupla com a borda da tabela */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- CABEÇALHOS COLORIDOS --- */
+
+/* Padrão (HTML - Laranja) */
+th {
+    background-color: var(--cor-html);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; /* Deixa o título mais "técnico" */
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Específico CSS (Azul) */
+.tabela-css th {
+    background-color: var(--cor-css);
+}
+
+/* Específico JS (Amarelo) */
+.tabela-js th {
+    background-color: var(--cor-js);
+    color: #121212; /* Texto escuro para contraste no amarelo */
+}
+
+/* --- LINHAS ALTERNADAS (ZEBRA) DARK MODE --- */
+
+/* Em vez de branco, usamos um branco com transparência baixíssima (5%) */
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* --- COLUNA DE EXEMPLO (Visual de Código) --- */
+/* A terceira coluna (Exemplo) geralmente tem código. Vamos estilizá-la. */
+td:nth-child(3) {
+    font-family: 'Consolas', 'Courier New', monospace; /* Fonte de programador */
+    font-size: 0.9rem;
+}
+
+/* --- CORES DOS CÓDIGOS DE EXEMPLO --- */
+
+/* Na tabela HTML, o código fica Laranja */
+.tabela-html td:nth-child(3) {
+    color: var(--cor-html);
+    font-weight: bold; /* Opcional: Ajuda a ler a cor colorida no fundo escuro */
+}
+
+/* Na tabela CSS, o código fica Azul */
+.tabela-css td:nth-child(3) {
+    color: var(--cor-css);
+    font-weight: bold;
+}
+
+/* Na tabela JS, o código fica Amarelo */
+.tabela-js td:nth-child(3) {
+    color: var(--cor-js);
+    font-weight: bold;
+}
+
+/* Zebrado (Linhas pares ficam cinza claro para facilitar leitura) */
+tr:nth-child(even) {
+    background-color: #333333;
+}
+
+/* Efeito Hover (Ao passar o mouse na linha) */
+.tabela-html tr:hover {
+    /* Cor Laranja com 15% de opacidade */
+    background-color: rgba(246, 123, 55, 0.15) !important;
+    cursor: default;
+}
+
+/* 2. Tabela CSS (Brilho Azul suave) */
+.tabela-css tr:hover {
+    /* Cor Azul com 15% de opacidade */
+    background-color: rgba(41, 181, 233, 0.15) !important;
+    cursor: default;
+}
+
+/* 3. Tabela JS (Brilho Amarelo suave) */
+.tabela-js tr:hover {
+    /* Cor Amarela com 15% de opacidade */
+    background-color: rgba(245, 206, 53, 0.15) !important;
+    cursor: default;
+}
+
+/* --- Cores Específicas das Tabelas --- */
+
+/* Tabela CSS - Cabeçalho Azul */
+.tabela-css th {
+    background-color: #0085C6; /* Azul Oficial do CSS */
+}
+
+/* Tabela JS - Cabeçalho Amarelo */
+.tabela-js th {
+    background-color: #EAB331; /* Amarelo Oficial do JS */
+}
+
+/* --- MENU SUPERIOR (Global) --- */
+header {
+    background-color: #2b2b2e;      /* Mesmo fundo escuro do rodapé para consistência */
+    padding: 15px 40px;          /* Espaçamento interno */
+    display: flex;               /* Ativa o modo Flexbox */
+    justify-content: space-between; /* Mágica: Logo na esquerda, Links na direita */
+    align-items: center;         /* Alinha tudo verticalmente no meio */
+    margin-bottom: 0px;         /* Empurra o conteúdo para baixo */
+}
+
+/* O "Logo" em texto */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none; /* Caso queira que o logo seja um link para a home */
+}
+
+/* Os Links do Menu */
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;       /* Espaço entre os links */
+    font-size: 16px;
+    transition: color 0.3s;  /* Suaviza a mudança de cor */
+}
+
+/* Efeito Hover Colorido no Menu */
+.menu-links a:hover {
+    color: #29B5E9; /* Azul claro da sua paleta */
+}
+
+/* --- MELHORIA DO BOTÃO VOLTAR --- */
+/* Vamos substituir o estilo antigo por este mais moderno */
+.botao-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    
+    /* Estilo "Outline" (Borda colorida, fundo transparente) */
+    border: 2px solid #333;
+    color: #333;
+    background-color: transparent;
+    
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
